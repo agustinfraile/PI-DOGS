@@ -8,7 +8,6 @@ module.exports = (sequelize) => {
       type: DataTypes.UUID,
       defaultValue: DataTypes.UUIDV4,
       allowNull: false,
-      unique: true,
       primaryKey: true
     },
     name: {
@@ -29,6 +28,10 @@ module.exports = (sequelize) => {
     image: {
       type: DataTypes.STRING,
       defaultValue: 'E:\Drive\Desarrollador\soyHenry\PI\PI-DOGS\PI-Dogs-main\client\src\images'
-    }
+    },
+    createInDb: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: true
+    },
   });
 };
