@@ -1,0 +1,37 @@
+.nav_bar {
+    width: 100%;
+    height: 5.2em;
+    background-color: coral;
+    display: flex;
+}
+
+.nav_bar-logo {
+    width: 10%;
+    height: 5.2em;
+    background-color: blue;
+}
+
+.nav_bar-pages {
+    width: 50%;
+    height: 5.2em;
+    background-color: aqua;
+}
+
+.nav_bar-pages ul {
+    display: flex;
+    list-style-type: none;
+    background-color: beige;
+    justify-content: space-evenly;
+    height: 5.2em;
+}
+
+.nav_bar-pages ul li {
+    background-color: rgb(87, 60, 60);
+    width: 40%;
+}
+
+.nav_bar-search {
+    width: 40%;
+    height: 5.2em;
+    background-color: blueviolet;
+}
