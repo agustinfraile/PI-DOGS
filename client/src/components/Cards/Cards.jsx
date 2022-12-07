@@ -4,7 +4,7 @@ import './Cards.css'
 
 const Cards = ({allDogs}) => {
   return (
-    <div>
+    <div className='cards'>
         {
             allDogs?.map(dog => {
                 return (
@@ -13,6 +13,8 @@ const Cards = ({allDogs}) => {
                         key = {dog.id}
                         name = {dog.name}
                         image = {dog.image}
+                        temperament = {dog.temperament}
+                        weight = {dog.weight}
                     />
                 )
             })
