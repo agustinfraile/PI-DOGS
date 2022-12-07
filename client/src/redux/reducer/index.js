@@ -1,4 +1,6 @@
-import { GET_DOGS } from "../actions";
+import { 
+    GET_DOGS 
+} from "../actions";
 
 const initialState = {
     dogs: [],
@@ -11,6 +13,8 @@ const rootReducer = (state = initialState, action) => {
                 ...state,
                 dogs: action.payload,
             }
+        default:
+            return state;
     }
 }
 
