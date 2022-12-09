@@ -12,7 +12,7 @@ export const getDogs = () => {
                 payload: dogs.data
             });
         } catch (error) {
-            throw new Error({error: 'Hay un error'})
+            throw new Error({error: 'No se pudo traer los dogs'})
         }
     }
 }
@@ -20,14 +20,17 @@ export const getDogs = () => {
 export const getDogDetail = (id) => {
     return async function(dispatch) {
         try {
-            const {data} = await axios.get(`http://localhost:3001/dogs/${id}`);
+            const dog = await axios.get(`http://localhost:3001/dogs/${id}`);
 
             return dispatch({
                 type: GET_DOG_DETAIL,
-                payload: data 
+                payload: dog.data[0]
             });
         } catch (error) {
-            throw new Error({error: 'Hay un error'});
+            return dispatch ({
+                type: GET_DOG_DETAIL,
+                payload: []
+            })
         }
     }
 }

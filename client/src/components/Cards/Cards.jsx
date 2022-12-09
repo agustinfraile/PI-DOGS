@@ -9,7 +9,10 @@ const Cards = ({allDogs}) => {
         {
             allDogs?.map(dog => {
                 return (
-                    <Link to={`/dog/${dog.id}`} key={dog.id}>
+                    <Link 
+                        to={`/dog/${dog.id}`} 
+                        key={dog.id}
+                    >
                         <CardDetail 
                             id = {dog.id}
                             key = {dog.id}

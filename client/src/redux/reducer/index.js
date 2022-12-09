@@ -21,7 +21,9 @@ const rootReducer = (state = initialState, action) => {
                 dog: action.payload
             }
         default:
-            return state;
+            return {
+                ...state
+            };
     }
 }
 
