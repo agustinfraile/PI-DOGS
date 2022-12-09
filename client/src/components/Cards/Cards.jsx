@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import CardDetail from '../CardDetail/CardDetail';
 import './Cards.css'
 
@@ -8,14 +9,16 @@ const Cards = ({allDogs}) => {
         {
             allDogs?.map(dog => {
                 return (
-                    <CardDetail 
-                        id = {dog.id}
-                        key = {dog.id}
-                        name = {dog.name}
-                        image = {dog.image}
-                        temperament = {dog.temperament}
-                        weight = {dog.weight}
-                    />
+                    <Link to={`/dog/${dog.id}`} key={dog.id}>
+                        <CardDetail 
+                            id = {dog.id}
+                            key = {dog.id}
+                            name = {dog.name}
+                            image = {dog.image}
+                            temperament = {dog.temperament}
+                            weight = {dog.weight}
+                        />
+                    </Link>
                 )
             })
                 
